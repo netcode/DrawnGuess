@@ -25,6 +25,11 @@
             function clearMe(){
               var canvas = document.getElementById('canvas');
               canvas.width = canvas.width;
+              var ctx = canvas.getContext("2d"); 
+      
+              ctx.strokeStyle = "#000000";
+              ctx.lineJoin = "round";
+              ctx.lineWidth = 5;
               return false;
             }
           </script>
