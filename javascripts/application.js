@@ -37,13 +37,16 @@
 				}
 
 				if(gapi.hangout.data.getValue('drawer') == this.participant.id){
+					console.log('Im a drawer');
 					//This is the current drawer
 					this.DrawCanvas.start();
 				}else{
+					console.log('Im a guesser');
 					//This is a guesser
-					this.DrawCanvas.updateMe();
+//					this.DrawCanvas.updateMe();
 				}
 				this.DrawCanvas.start();
+				this.DrawCanvas.updateMe();
 
 				/*
 				 * Monitor for client changes
