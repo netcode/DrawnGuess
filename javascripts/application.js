@@ -26,34 +26,36 @@
 			this.participant = {};
 			this.participant.id = gapi.hangout.getParticipantId();
 
-			this.players = global.$.map(gapi.getParticipants(), function(participant){
-				return participant.id;
-			});
+			try{
+				this.players = global.$.map(gapi.getParticipants(), function(participant){
+					return participant.id;
+				});
 
-			var sharedState = gapi.hangout.data.getState();
-			if(sharedState['drawer']){
-				gapi.hangout.data.setValue('drawer', this.participant.id);
+				var sharedState = gapi.hangout.data.getState();
+				if(sharedState['drawer']){
+					gapi.hangout.data.setValue('drawer', this.participant.id);
+				}
+
+				if(gapi.hangout.data.getValue('drawer') == this.participant.id){
+					//This is the current drawer
+					this.DrawCanvas.start();
+				}else{
+					//This is a guesser
+					this.DrawCanvas.updateMe();
+				}
+
+				/*
+				 * Monitor for client changes
+				*/
+				gapi.hangout.onParticipantsChanged.add(this.refreshParticipantsList.bind(this));
+
+				/*
+				 * Initially draw the participants
+				*/
+				this.displayParticipants();
+			}catch(e){
+				console.log(e);
 			}
-
-			if(gapi.hangout.data.getValue('drawer') == this.participant.id){
-				//This is the current drawer
-				this.DrawCanvas.start();
-			}else{
-				//This is a guesser
-				this.DrawCanvas.updateMe();
-			}
-
-			/*
-			 * Monitor for client changes
-			*/
-			gapi.hangout.onParticipantsChanged.add(this.refreshParticipantsList.bind(this));
-
-			/*
-			 * Initially draw the participants
-			*/
-			this.displayParticipants();
-			this.DrawCanvas.start();
-
 
 			
 
