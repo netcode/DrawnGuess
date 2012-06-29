@@ -24,8 +24,23 @@
 			 * Ready to start our application.
 			*/
 			console.log("Application is ready to run!");
+			this.participant = {};
+			this.participant.id = gapi.hangout.getParticipantId();
 
-			//this.players = $.map(gapi.getParticipants())
+			this.players = $.map(gapi.getParticipants(), function(participant){
+				return participant.id;
+			});
+
+			var sharedState = gapi.hangout.data.getState();
+			if(sharedState['drawer']){
+				gapi.hangout.data.setValue('drawer', this.participant.id);
+			}
+
+			if(gapi.hangout.data.getValue('drawer') == this.participant.id){
+				//This is the current drawer
+			}else{
+				//This is a guesser
+			}
 
 			/*
 			 * Monitor for client changes

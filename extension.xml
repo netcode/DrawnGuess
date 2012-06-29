@@ -7,14 +7,17 @@
   <Content type="html">
     <![CDATA[
       
-      <link rel="stylesheet" href="//%DOMAIN%/stylesheets/application.css" type="text/css">
-      <script src="//talkgadget.google.com/hangouts/api/hangout.js?v=1.0"></script>
-      <script src="//%DOMAIN/javascripts/jquery-1.7.1.min.js"></script>
+      <link rel="stylesheet" href="https://raw.github.com/netcode/DrawnGuess/master/stylesheets/application.css" type="text/css">
+      <script src="talkgadget.google.com/hangouts/api/hangout.js?v=1.0"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
       
-      <script src="//%DOMAIN%/javascripts/application.js"></script>
+      <script src="https://raw.github.com/netcode/DrawnGuess/master/javascripts/application.js"></script>
       
       <body>
           <canvas id="canvas" width="500" height="250" style="background: yellow;"></canvas>
+
+          <div id="container">
+          </div>
       </body>
       
     ]]>
