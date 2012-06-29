@@ -12,6 +12,7 @@
       <script src="//%DOMAIN/javascripts/jquery-1.7.1.min.js"></script>
       
       <script src="//%DOMAIN%/javascripts/application.js"></script>
+       <script src="//%DOMAIN%/javascripts/canvas.js"></script>
       
       <body>
           <canvas id="canvas" width="500" height="250" style="background: yellow;"></canvas>
