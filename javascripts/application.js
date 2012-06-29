@@ -189,7 +189,7 @@
 	                          this.cpx,this.cpy]));
 		},
 		'updateMe':function(){
-			gapi.hangout.data.onMessageReceived(function(event){
+			gapi.hangout.data.onMessageReceived.add(function(event){
 				//this is when message received
 				try {
 				    var data = JSON.parse(event.message);
