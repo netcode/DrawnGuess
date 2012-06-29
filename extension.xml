@@ -17,7 +17,7 @@
          <h1>Draw n Guess</h1>
          <div style="width:500px;float:left">
             <canvas id="canvas" width="500" height="250" style="background: yellow;"></canvas>
-            <a href="" onclick="clearMe()">Clear</a>
+            <a href="javascript:void(0)" onclick="clearMe()">Clear</a>
          </div>
           <div id="container">
           </div>
@@ -25,6 +25,7 @@
             function clearMe(){
               var canvas = document.getElementByID('canvas');
               canvas.width = canvas.width;
+              return false;
             }
           </script>
       </body>
