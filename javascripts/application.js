@@ -133,6 +133,7 @@
 		'CanvasMessageCount':0,
 		'start':function(){
 			//alert(this.drawObj);
+			console.log('Canvas Start---');
 			this.canvas = document.getElementById(this.drawObj);
 			this.ctx = this.canvas.getContext("2d"); 
 			
@@ -154,10 +155,11 @@
 				var rpy = py - $(this).offset().top ;
 				
 				that.ctx.beginPath();
-			    that.ctx.moveTo(rpx, rpy);
-			    
-			    that.cpx.push(rpx);
-			    that.cpy.push(rpy);
+		    that.ctx.moveTo(rpx, rpy);
+		    
+		    that.cpx.push(rpx);
+		    that.cpy.push(rpy);
+			  console.log(that.cpx + '   ' + that.cpy);
 			});
 			$('#'+this.drawObj).mousemove(function(e){
 				if(that.drawStart){
