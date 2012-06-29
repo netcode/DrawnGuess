@@ -38,8 +38,10 @@
 
 			if(gapi.hangout.data.getValue('drawer') == this.participant.id){
 				//This is the current drawer
+				this.DrawCanvas.start();
 			}else{
 				//This is a guesser
+				this.DrawCanvas.updateMe();
 			}
 
 			/*
