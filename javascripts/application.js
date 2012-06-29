@@ -203,7 +203,7 @@
 					var cpx = data[2];
 					var cpy = data[3];
 
-				    this.renderCanvas();
+				    this.renderCanvas(cpx,cpy);
 				  } catch (e) {
 				    console.log(e);
 				  }
