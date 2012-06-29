@@ -8,10 +8,18 @@ html, body
 	line-height: 18px;
 }
 
+canvas{
+	float: left;
+
+}
+
 #container
 {
 	background: white;
 	padding: 5px;
+	width: 200px;
+	float: right;
+	display: inline-block;
 }
 
 #container ul

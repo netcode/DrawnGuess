@@ -1,5 +1,4 @@
-
-!(function(global){
+(function(global){
 
 	var Application = function(){
 		
@@ -27,7 +26,7 @@
 			this.participant = {};
 			this.participant.id = gapi.hangout.getParticipantId();
 
-			this.players = $.map(gapi.getParticipants(), function(participant){
+			this.players = global.$.map(gapi.getParticipants(), function(participant){
 				return participant.id;
 			});
 
