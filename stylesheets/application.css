@@ -1,0 +1,31 @@
+html, body
+{
+	margin: 0px;
+	margin: 0px;
+	background: white;
+	color: #222;
+	font: normal 13px arial,sans-serif;
+	line-height: 18px;
+}
+
+#container
+{
+	background: white;
+	padding: 5px;
+}
+
+#container ul
+{
+	list-style: none;
+	padding-bottom: 5px;
+}
+
+#container ul li
+{
+	
+}
+
+#container ul li.unknown
+{
+	margin-left: 36px;
+}
