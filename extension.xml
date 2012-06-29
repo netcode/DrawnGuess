@@ -23,7 +23,7 @@
           </div>
           <script type="text/javascript">
             function clearMe(){
-              var canvas = document.getElementByID('canvas');
+              var canvas = document.getElementById('canvas');
               canvas.width = canvas.width;
               return false;
             }
