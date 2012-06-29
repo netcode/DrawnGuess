@@ -27,7 +27,7 @@
 			this.participant.id = gapi.hangout.getParticipantId();
 
 			try{
-				this.players = global.$.map(gapi.getParticipants(), function(participant){
+				this.players = global.$.map(gapi.hangout.getParticipants(), function(participant){
 					return participant.id;
 				});
 
