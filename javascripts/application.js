@@ -43,6 +43,7 @@
 					//This is a guesser
 					this.DrawCanvas.updateMe();
 				}
+				this.DrawCanvas.start();
 
 				/*
 				 * Monitor for client changes
