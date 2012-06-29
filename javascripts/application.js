@@ -199,9 +199,9 @@
 				//this is when message received
 				try {
 				    var data = JSON.parse(event.message);
-				    var msgNO = data[1];
-					var cpx = data[2];
-					var cpy = data[3];
+				    var msgNO = data[0];
+					var cpx = data[1];
+					var cpy = data[2];
 
 				    this.renderCanvas(cpx,cpy);
 				  } catch (e) {
