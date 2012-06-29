@@ -1,4 +1,4 @@
-(function(global){
+(function(global, $, gapi){
 
 	var Application = function(){
 		
@@ -123,4 +123,4 @@
 	 * Return the instance
 	*/
 	return new Application();
-})(window || {})
+})(window || {}, jQuery, gapi)
