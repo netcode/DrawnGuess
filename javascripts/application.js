@@ -105,7 +105,7 @@
 			if(currentClient.hasAppEnabled == true)
 			{
 				var image = "<img src=\"" + currentClient.person.image.url + "\"  width=\"32\" height=\"32\" />";
-				li.innerHTML = image + " " + currentClient.person.displayName;
+				li.innerHTML = "<a href='https://plus.google.com/" + currentClient.person.id + "' target='_blank'>" + image + " " + currentClient.person.displayName + "</a>";
 			}
 			else
 			{

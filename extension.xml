@@ -19,8 +19,12 @@
             <canvas id="canvas" width="500" height="250" style="background: yellow;"></canvas>
             <a href="javascript:void(0)" onclick="clearMe()">Clear</a>
          </div>
+         <div style="width:200px;float:right;">
+          <h3>PLayers List</h3>
           <div id="container">
           </div>
+          <div>
+          
           <script type="text/javascript">
             function clearMe(){
               var canvas = document.getElementById('canvas');
