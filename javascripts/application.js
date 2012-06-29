@@ -51,6 +51,7 @@
 			 * Initially draw the participants
 			*/
 			this.displayParticipants();
+			this.DrawCanvas.start();
 
 
 			
