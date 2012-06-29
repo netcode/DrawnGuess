@@ -14,10 +14,19 @@
       <script src="https://raw.github.com/netcode/DrawnGuess/master/javascripts/application.js"></script>
       
       <body>
-          <canvas id="canvas" width="500" height="250" style="background: yellow;"></canvas>
-
+         <h1>Draw n Guess</h1>
+         <div style="width:500px;float:left">
+            <canvas id="canvas" width="500" height="250" style="background: yellow;"></canvas>
+            <a href="" onclick="clearMe()">Clear</a>
+         </div>
           <div id="container">
           </div>
+          <script type="text/javascript">
+            function clearMe(){
+              var canvas = document.getElementByID('canvas');
+              canvas.width = canvas.width;
+            }
+          </script>
       </body>
       
     ]]>

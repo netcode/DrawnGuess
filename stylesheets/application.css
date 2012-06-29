@@ -9,8 +9,7 @@ html, body
 }
 
 canvas{
-	float: left;
-
+  cursor: pointer;
 }
 
 #container
